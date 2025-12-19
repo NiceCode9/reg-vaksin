@@ -39,7 +39,7 @@ class WilayahController extends Controller
 
     public function getPropinsi()
     {
-        $result = DB::table('smis_rg_prop')->get();
+        $result = DB::table('smis_rg_propinsi')->get();
         return response()->json($result);
     }
 }
