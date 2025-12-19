@@ -39,7 +39,25 @@ class WilayahController extends Controller
 
     public function getPropinsi()
     {
-        $result = DB::table('smis_rg_propinsi')->get();
+        $result = DB::table('smis_rg_propinsi')->select('nama', DB::raw('MIN(id) AS id'))->groupBy('nama')->orderBy('nama', 'ASC')->get();
+        return response()->json($result);
+    }
+
+    public function getKabupaten($prop_id)
+    {
+        $result = DB::table('smis_rg_kabupaten')->select('id', 'nama')->where('no_prop', $prop_id)->get();
+        return response()->json($result);
+    }
+
+    public function getKecamatan($kab_id)
+    {
+        $result = DB::table('smis_rg_kec')->select('id', 'nama')->where('no_kab', $kab_id)->get();
+        return response()->json($result);
+    }
+
+    public function getKelurahan($kec_id)
+    {
+        $result = DB::table('smis_rg_kelurahan')->select('id', 'nama')->where('no_kec', $kec_id)->get();
         return response()->json($result);
     }
 }
