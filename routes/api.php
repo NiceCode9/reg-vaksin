@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/propinsi', [App\Http\Controllers\Api\WilayahController::class, 'getPropinsi']);
+Route::get('/kabupaten/{prop_id}', [App\Http\Controllers\Api\WilayahController::class, 'getKabupaten']);
+Route::get('/kecamatan/{kab_id}', [App\Http\Controllers\Api\WilayahController::class, 'getKecamatan']);
+Route::get('/kelurahan/{kec_id}', [App\Http\Controllers\Api\WilayahController::class, 'getKelurahan']);
