@@ -72,7 +72,7 @@ class PendaftaranController extends Controller
                     'origin' => 'rsij',
                     'origin_id' => 0,
                     'time_updated' => date('Y-m-d H:i:s'),
-                    'origin_update' => 'rsij',
+                    'origin_updated' => 'rsij',
                 ];
 
                 $nrm = DB::table('smis_rg_patient')->insertGetId($data_pasien);
@@ -149,7 +149,7 @@ class PendaftaranController extends Controller
                 'tutup_tagihan' => 0,
                 'origin' => 'rsij',
                 'time_updated' => date('Y-m-d H:i:s'),
-                'origin_updated' => 'rsij',
+                'origin_updatedd' => 'rsij',
             ];
             $smis_rg_layananpasien_id = DB::table('smis_rg_layananpasien')->insertGetId($data_rg_layananpasien);
 
@@ -215,7 +215,7 @@ class PendaftaranController extends Controller
                 'autonomous' => '[rsij]',
                 'duplicate' => 0,
                 'time_updated' => date('Y-m-d H:i:s'),
-                'origin_updated' => 'rsij',
+                'origin_updatedd' => 'rsij',
             ];
             DB::table('smis_rwt_antrian_poli_vaksin')->insert($data_rwt_antrian_poli_vaksin);
 
