@@ -23,4 +23,4 @@ Route::get('/kabupaten/{prop_id}', [App\Http\Controllers\Api\WilayahController::
 Route::get('/kecamatan/{kab_id}', [App\Http\Controllers\Api\WilayahController::class, 'getKecamatan']);
 Route::get('/kelurahan/{kec_id}', [App\Http\Controllers\Api\WilayahController::class, 'getKelurahan']);
 
-Route::post('/pendaftaran', [App\Http\Controllers\Api\PendaftaranController::class, 'store']);
+Route::post('/register', [App\Http\Controllers\Api\PendaftaranController::class, 'store']);
