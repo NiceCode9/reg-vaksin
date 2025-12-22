@@ -20,6 +20,7 @@ class PendaftaranController extends Controller
             $no_paspor = $request->input('no_paspor', '0000000000');
             $sebutan = $request->input('sebutan');
             $tgl_lahir = $request->input('tgl_lahir');
+            $tempat_lahir = $request->input('tempat_lahir');
             $jenkel = $request->input('jenis_kelamin');
             $no_hp = $request->input('no_hp', '');
             $email = $request->input('email', '');
@@ -45,6 +46,8 @@ class PendaftaranController extends Controller
                     'sebutan' => $sebutan,
                     'nama' => $nama,
                     'alamat' => $alamat,
+                    'tempat_lahir' => $tempat_lahir,
+                    'tgl_lahir' => $tgl_lahir,
                     'tgl_lahir' => $tgl_lahir,
                     'kelamin' => $jenkel,
                     'ktp' => $nik,
