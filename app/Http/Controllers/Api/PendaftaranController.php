@@ -373,7 +373,7 @@ class PendaftaranController extends Controller
             ];
             DB::table('smis_ksr_kolektif')->insert($data_ksr_kolektif);
 
-            // DB::commit();
+            DB::commit();
 
             return response()->json([
                 'status' => 'success',
