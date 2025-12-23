@@ -101,6 +101,7 @@ class PendaftaranController extends Controller
                     'kabupaten_keluarga' => '',
                     'umur_keluarga' => '',
                     'telepon_keluarga' => '',
+                    'pekerjaan_keluarga' => '',
                     'autonomous' => '[rsij]',
                     'duplicate' => 0,
                     'origin' => 'rsij',
